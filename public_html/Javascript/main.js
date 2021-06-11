@@ -33,14 +33,14 @@ const resultSubmittedButton = document.querySelector('.button1');
 const viewSolutionButton = document.querySelector('.button2');
 const resetPressButton = document.querySelector('.button3');
 
-const number1 = document.querySelector('.number1');
-const number2 = document.querySelector('.number2');
+const number4 = document.querySelector('.cnumber4');
+const number7 = document.querySelector('.cnumber7');
 
 
 function checkNumbers() {
   //alert('message');
-  let numbreGuessed1 = Number(number1.value);
-  let numberGuessed2 =  Number(number2.value);
+  let numbreGuessed1 = Number(number4.value);
+  let numberGuessed2 =  Number(number7.value);
   if (numbreGuessed1 === cnumber4 && numberGuessed2 === cnumber7){
       message.textContent = "Congratulations, correct numbers!";
   }
@@ -52,15 +52,15 @@ function checkNumbers() {
 }
 
 function viewSolution(){
-    message.textContent = "Here is the solution!";
-    number1.value = cnumber4;
-    number2.value = cnumber7;
+    message.textContent = "Solution!";
+    number4.value = cnumber4;
+    number7.value = cnumber7;
 }
 
 function resetAll(){
    
-    number1.value ="";
-    number2.value = "";
+    number4.value ="";
+    number7.value = "";
     message.textContent ="";
     randomIncrement = Math.floor(Math.random()*10+1);
     cnumber1 = 1 * randomIncrement;
